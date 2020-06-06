@@ -1,2 +1,14 @@
+# MAC
 .DS_Store
 **/.DS_Store
+
+mobile/react/node_modules/**/*
+mobile/react/.expo/*
+mobile/react/npm-debug.*
+mobile/react/*.jks
+mobile/react/*.p8
+mobile/react/*.p12
+mobile/react/*.key
+mobile/react/*.mobileprovision
+mobile/react/*.orig.*
+mobile/react/web-build/

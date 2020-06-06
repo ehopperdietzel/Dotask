@@ -1,3 +1,3 @@
 # Dotask
 
-Mobile and web versions.
+Mobile and web version of Dotask.
