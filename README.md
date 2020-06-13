@@ -1,3 +1,3 @@
-# Dotask
+# POLOLITOS
 
-Mobile and web version of Dotask.
+Diseño, y desarrollo de applicación Pololitos.

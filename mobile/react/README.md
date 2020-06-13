@@ -1,3 +1,3 @@
-# React Project
+# Proyecto React
 
-Android and iOS version.
+**[Instrucciones de Expo](https://expo.io/learn)**

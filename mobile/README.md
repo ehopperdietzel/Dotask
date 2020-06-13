@@ -1,1 +1,4 @@
-# Mobile Version
+# Versión Móvil
+
+* iOS
+* Android
