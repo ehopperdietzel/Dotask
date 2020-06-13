@@ -1,3 +1,5 @@
 # POLOLITOS
 
-Diseño, y desarrollo de applicación Pololitos.
+![](logo/PNG/GitHub.png)
+
+Diseño, y desarrollo de aplicación Pololitos.
