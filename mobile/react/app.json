@@ -1,11 +1,10 @@
 {
   "expo": {
-    "name": "Dotask",
-    "slug": "Dotask",
+    "name": "Pololitos",
+    "slug": "Pololitos",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -23,7 +22,9 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cuarzo.pololitos",
+      "buildNumber": "1.0.0"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
