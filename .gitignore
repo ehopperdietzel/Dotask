@@ -11,4 +11,7 @@ mobile/react/*.p12
 mobile/react/*.key
 mobile/react/*.mobileprovision
 mobile/react/*.orig.*
+mobile/react/package-lock.json
+mobile/react/yarn.lock
+mobile/react/yarn-error.log
 mobile/react/web-build/
