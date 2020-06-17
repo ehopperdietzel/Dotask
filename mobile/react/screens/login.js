@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { StyleSheet, Image, View, TouchableOpacity, StatusBar } from 'react-native';
 import { Container, Content, Text, Item, Input, Button, Form} from 'native-base';
+import LinearGradient from "react-native-linear-gradient";
 import images from './../hooks/images';
 
 function LoginView() {
 
-this.passInput = React.createRef();
+passInput = React.createRef();
 
 return (
     <Container style={styles.container}>
+        <LinearGradient colors={['#111111','#333333']}>
         <Content contentContainerStyle={styles.content}>
 
             <Image style={styles.logo} source={images.logo}/>
@@ -56,6 +58,7 @@ return (
 
             </View>
         </Content>
+        </LinearGradient>
     </Container>
 );
 }
