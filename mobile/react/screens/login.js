@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Image, View, TouchableOpacity, StatusBar } from 'react-native';
 import { Container, Content, Text, Item, Input, Button, Form} from 'native-base';
-import LinearGradient from "react-native-linear-gradient";
 import images from './../hooks/images';
 
 function LoginView() {
@@ -10,17 +9,18 @@ passInput = React.createRef();
 
 return (
     <Container style={styles.container}>
-        <LinearGradient colors={['#111111','#333333']}>
         <Content contentContainerStyle={styles.content}>
 
             <Image style={styles.logo} source={images.logo}/>
-            <Text style={styles.textLogo}>POLOLITOS</Text>
+            <Text style={styles.textLogo}>pololitos</Text>
 
             
             <Item style={styles.input}>
             <Input 
                 keyboardType='email-address'
                 placeholder='Correo electrónico'
+                placeholderTextColor = {"#DDD"}
+                style={{color:"#FFF"}}
                 returnKeyType='next'
                 onSubmitEditing={() => { 
                 this.passInput._root.focus(); 
@@ -30,7 +30,9 @@ return (
 
             <Item style={styles.input}>
             <Input 
-            ref={input => this.passInput = input}
+            ref={input => passInput = input}
+            placeholderTextColor = {"#DDD"}
+            style={{color:"#FFF"}}
             secureTextEntry={true} 
             placeholder='Contraseña'
             returnKeyType='next'
@@ -43,14 +45,14 @@ return (
             <Text style={styles.forgotPassword}>¿Olvidaste la contraseña?</Text>
             </TouchableOpacity>
             
-            <Button  bordered dark style={styles.nextButton}>
+            <Button  bordered light style={styles.nextButton}>
                 <Text>Siguiente</Text>
             </Button>
         
 
             <View style={styles.noAccount}>
 
-            <Text>¿No tienes cuenta?</Text>
+            <Text style={{color:'#FFF'}}>¿No tienes cuenta?</Text>
 
             <TouchableOpacity>
                 <Text style={styles.forgotPassword}> Regístrate</Text>
@@ -58,8 +60,9 @@ return (
 
             </View>
         </Content>
-        </LinearGradient>
+        
     </Container>
+    
 );
 }
 
@@ -68,13 +71,15 @@ const styles = StyleSheet.create({
   container: 
   {
     paddingTop: StatusBar.currentHeight,
+    backgroundColor:'#257FED',
+    
   },
   content:
   {
     paddingTop:'25%',
     alignItems:'center',
     flexDirection:'column',
-    justifyContent:'center'
+    justifyContent:'center',
   },
   logo: 
   {
@@ -83,8 +88,9 @@ const styles = StyleSheet.create({
   },
   textLogo: 
   {
+    color:'#FFFFFF',
     marginTop:20,
-
+    fontStyle:'italic',
     marginBottom:20,
     textAlign:'center',
     fontWeight:'500',
@@ -97,9 +103,11 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     fontSize:14,
     textAlign:'center',
+    color:'#FFF'
   },
   input:
   {
+    color:'#FFFFFF',
     width:'75%'
   },
   noAccount:
