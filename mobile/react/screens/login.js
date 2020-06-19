@@ -3,11 +3,12 @@ import { StyleSheet, Image, View, TouchableOpacity, StatusBar } from 'react-nati
 import { Container, Content, Text, Item, Input, Button, Form} from 'native-base';
 import images from './../hooks/images';
 
-function LoginView() {
+class LoginView extends Component {
 
 passInput = React.createRef();
 
-return (
+render(){
+  return(
     <Container style={styles.container}>
         <Content contentContainerStyle={styles.content}>
 
@@ -45,8 +46,8 @@ return (
             <Text style={styles.forgotPassword}>¿Olvidaste la contraseña?</Text>
             </TouchableOpacity>
             
-            <Button  bordered light style={styles.nextButton}>
-                <Text>Siguiente</Text>
+            <Button  bordered light style={styles.nextButton} onPress={()=>this.props.navigation.navigate("Welcome")}>
+              <Text>Siguiente</Text>
             </Button>
         
 
@@ -63,7 +64,8 @@ return (
         
     </Container>
     
-);
+    );
+  }
 }
 
 
