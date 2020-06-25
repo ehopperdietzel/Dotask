@@ -5,62 +5,64 @@ import images from './../hooks/images';
 
 class LoginView extends Component {
 
-passInput = React.createRef();
+  constructor(props)
+  {
+    super(props);
+    this.passInput = React.createRef();
+  }
+
 
 render(){
   return(
     <Container style={styles.container}>
-        <Content contentContainerStyle={styles.content}>
+      <Content contentContainerStyle={styles.content}>
 
-            <Image style={styles.logo} source={images.logo}/>
-            <Text style={styles.textLogo}>pololitos</Text>
+        <Image style={styles.logo} source={images.logo}/>
+        <Text style={styles.textLogo}>pololitos</Text>
 
-            
-            <Item style={styles.input}>
-            <Input 
-                keyboardType='email-address'
-                placeholder='Correo electrónico'
-                placeholderTextColor = {"#DDD"}
-                style={{color:"#FFF"}}
-                returnKeyType='next'
-                onSubmitEditing={() => { 
-                this.passInput._root.focus(); 
-                }}
-                />
-            </Item>
-
-            <Item style={styles.input}>
-            <Input 
-            ref={input => passInput = input}
-            placeholderTextColor = {"#DDD"}
-            style={{color:"#FFF"}}
-            secureTextEntry={true} 
-            placeholder='Contraseña'
-            returnKeyType='next'
-            />
-            </Item>
-            
-            
         
-            <TouchableOpacity>
-            <Text style={styles.forgotPassword}>¿Olvidaste la contraseña?</Text>
-            </TouchableOpacity>
-            
-            <Button  bordered light style={styles.nextButton} onPress={()=>this.props.navigation.navigate("Welcome")}>
-              <Text>Siguiente</Text>
-            </Button>
+        <Item style={styles.input}>
+        <Input 
+          keyboardType='email-address'
+          placeholder='Correo electrónico'
+          placeholderTextColor = {"#DDD"}
+          style={{color:"#FFF"}}
+          returnKeyType='next'
+          onSubmitEditing={() => { 
+          this.passInput._root.focus(); 
+          }}
+          />
+        </Item>
+
+        <Item style={styles.input}>
+        <Input 
+          ref={input => this.passInput = input}
+          placeholderTextColor = {"#DDD"}
+          style={{color:"#FFF"}}
+          secureTextEntry={true} 
+          placeholder='Contraseña'
+          returnKeyType='next'
+          />
+        </Item>
         
+        <TouchableOpacity>
+          <Text style={styles.forgotPassword}>¿Olvidaste la contraseña?</Text>
+        </TouchableOpacity>
+        
+        <Button  bordered light style={styles.nextButton} onPress={()=>this.props.navigation.navigate("Welcome")}>
+          <Text>Siguiente</Text>
+        </Button>
 
-            <View style={styles.noAccount}>
+        <View style={styles.noAccount}>
 
-            <Text style={{color:'#FFF'}}>¿No tienes cuenta?</Text>
+          <Text style={{color:'#FFF'}}>¿No tienes cuenta?</Text>
 
-            <TouchableOpacity>
-                <Text style={styles.forgotPassword}> Regístrate</Text>
-            </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={styles.forgotPassword} onPress={()=>this.props.navigation.navigate("Register")}> Regístrate</Text>
+          </TouchableOpacity>
 
-            </View>
-        </Content>
+        </View>
+      </Content>
         
     </Container>
     
